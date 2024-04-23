@@ -14,7 +14,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body>
+      <body className={styles.container}>
         <header className={styles.header}></header>
         {children}
         <footer className={styles.footer}></footer>
