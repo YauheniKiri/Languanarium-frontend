@@ -17,6 +17,7 @@ export default function RootLayout({
       <body>
         <header className={styles.header}></header>
         {children}
+        <footer className={styles.footer}></footer>
       </body>
     </html>
   );
