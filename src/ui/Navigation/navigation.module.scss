@@ -1,0 +1,25 @@
+.menu {
+  display: flex;
+  gap: 10px 20px;
+  font-size: 20px;
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.item {
+  display: block;
+  color: $font-primary-color;
+  padding: 10px;
+  text-decoration: none;
+
+  &:hover,
+  &:focus {
+    outline: none;
+    text-decoration: underline;
+  }
+}
+
+.active {
+  color: $font-active-color;
+}
