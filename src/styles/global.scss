@@ -1,5 +1,11 @@
 @import "normalize.css";
 
+:root {
+  --text-color: rgb(0, 0, 0);
+  --text-active-color: rgb(157, 60, 212);
+  --shadow-color: rgb(0, 0, 0);
+}
+
 .visually-hidden {
   position: absolute;
   width: 1px;
