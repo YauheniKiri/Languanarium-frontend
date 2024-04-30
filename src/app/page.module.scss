@@ -6,20 +6,20 @@
 
 .header {
   padding: 20px 0;
-  box-shadow: 0 5px 5px var(--shadow-color);
+  box-shadow: 0 5px 5px $shadow-color;
 }
 
 .footer {
   padding: 20px 0;
   margin-top: auto;
-  box-shadow: 0 -5px 5px var(--shadow-color);
+  box-shadow: 0 -5px 5px $shadow-color;
 }
 
 .lead {
   font-size: $font-large;
   color: rgba(255, 255, 255, 0);
   text-align: center;
-  text-shadow: 1px 1px 1px var(--text-color);
+  text-shadow: 1px 1px 1px $text-primary-color;
   background-image: linear-gradient(to right, rgb(0, 0, 0), rgb(255, 255, 255));
   background-clip: text;
 }

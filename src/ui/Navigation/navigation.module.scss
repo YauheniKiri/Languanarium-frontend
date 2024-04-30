@@ -9,7 +9,7 @@
 
 .item {
   display: block;
-  color: var(--text-color);
+  color: $text-primary-color;
   padding: 10px;
   text-decoration: none;
 
@@ -21,5 +21,5 @@
 }
 
 .active {
-  color: var(--text-active-color);
+  color: $text-active-color;
 }
