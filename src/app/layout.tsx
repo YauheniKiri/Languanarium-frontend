@@ -1,10 +1,11 @@
-import "@/src/styles/global.scss";
-import styles from "./page.module.scss";
 import type { Metadata } from "next";
 import { AppRouterCacheProvider } from "@mui/material-nextjs/v14-appRouter";
 import CssBaseline from "@mui/material/CssBaseline";
-import Navigation from "@/src/ui/Navigation/Navigation";
 import { platypi } from "@/fonts";
+import styles from "./page.module.scss";
+import "@/src/styles/global.scss";
+
+import Navigation from "@/src/ui/Navigation/Navigation";
 import Wrapper from "../ui/Wrapper/Wrapper";
 
 export const metadata: Metadata = {
@@ -18,20 +19,22 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html className={platypi.className} lang="en">
-      <body className={styles.container}>
-        <AppRouterCacheProvider options={{ enableCssLayer: true }}>
-          <CssBaseline>
-            <header className={styles.header}>
-              <Wrapper>
-                <Navigation></Navigation>
-              </Wrapper>
-            </header>
-            {children}
-            <footer className={styles.footer}></footer>
-          </CssBaseline>
-        </AppRouterCacheProvider>
-      </body>
-    </html>
+    <AppRouterCacheProvider options={{ enableCssLayer: true }}>
+      <CssBaseline>
+        <html lang="en">
+          <body className={platypi.className}>
+            <div className={styles.container}>
+              <header className={styles.header}>
+                <Wrapper>
+                  <Navigation></Navigation>
+                </Wrapper>
+              </header>
+              {children}
+              <footer className={styles.footer}></footer>
+            </div>
+          </body>
+        </html>
+      </CssBaseline>
+    </AppRouterCacheProvider>
   );
 }
