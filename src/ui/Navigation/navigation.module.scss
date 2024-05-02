@@ -1,17 +1,49 @@
+.container {
+  background-color: rgb(255, 255, 255);
+
+  @media (max-width: ($tablet-width - 1)) {
+    &.mobile-opened {
+      position: fixed;
+      inset: 0;
+      padding: 0 10px 20px;
+
+      nav {
+        position: fixed;
+        top: 0;
+        margin-top: 60px;
+        height: 100%;
+        width: 100%;
+        overflow-y: auto;
+      }
+    }
+  }
+}
+
 .menu {
   display: flex;
-  gap: 10px 20px;
-  font-size: $font-upper-medium;
+  flex-direction: column;
+  row-gap: 10px;
   padding: 0;
   margin: 0;
   list-style: none;
+
+  @media (min-width: $tablet-width) {
+    flex-direction: row;
+    flex-wrap: wrap;
+    column-gap: 20px;
+    font-size: $font-medium;
+  }
 }
 
 .item {
   display: block;
   color: $text-primary-color;
-  padding: 10px;
+  padding: 0;
   text-decoration: none;
+
+  &.active {
+    color: $text-active-color;
+  }
 
   &:hover,
   &:focus {
@@ -20,6 +52,30 @@
   }
 }
 
-.active {
-  color: $text-active-color;
+.button-wrapper {
+  @media (max-width: ($tablet-width - 1)) {
+    position: sticky;
+    top: 0;
+    padding: 20px 0 10px;
+    background-color: rgb(255, 255, 255);
+    z-index: 1;
+  }
+}
+
+.button {
+  padding: 0;
+  width: 24px;
+  height: 24px;
+  background-color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+
+  &.icon {
+    width: inherit;
+    height: inherit;
+  }
+
+  @media (min-width: $tablet-width) {
+    display: none;
+  }
 }
