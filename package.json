@@ -4,9 +4,9 @@
   "private": true,
   "scripts": {
     "dev": "next dev",
-    "build": "next build",
+    "build": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "prettier --check . && stylelint --allow-empty-input \"**/*.{css,scss}\" && next lint"
   },
   "dependencies": {
     "@emotion/cache": "^11.11.0",
@@ -25,7 +25,13 @@
     "@types/react-dom": "^18",
     "eslint": "^8",
     "eslint-config-next": "14.2.2",
+    "prettier": "^3.2.5",
     "sass": "^1.75.0",
+    "stylelint": "^16.5.0",
+    "stylelint-config-prettier-scss": "^1.0.0",
+    "stylelint-config-recess-order": "^5.0.1",
+    "stylelint-config-standard-scss": "^13.1.0",
+    "stylelint-order": "^6.0.4",
     "typescript": "^5"
   }
 }
