@@ -23,10 +23,14 @@
 }
 
 .lead {
-  font-size: $font-large;
+  font-size: $font-upper-medium;
   color: rgb(255 255 255 / 0%);
   text-align: center;
   text-shadow: 1px 1px 1px $text-primary-color;
   background-image: linear-gradient(to right, rgb(0 0 0), rgb(255 255 255));
   background-clip: text;
+
+  @media (min-width: $desktop-width) {
+    font-size: $font-large;
+  }
 }
