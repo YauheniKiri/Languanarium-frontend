@@ -43,7 +43,7 @@
   text-decoration: none;
 
   &.active {
-    color: $text-active-color;
+    color: $primary-color;
   }
 
   &:active {
@@ -81,9 +81,10 @@
   background-color: rgb(255 255 255);
   border: none;
 
-  &.icon {
+  & .icon {
     width: inherit;
     height: inherit;
+    fill: $primary-color;
   }
 
   &:active {
