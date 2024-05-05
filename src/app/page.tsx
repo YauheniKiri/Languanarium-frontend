@@ -8,7 +8,7 @@ export default function Home() {
         <h1 className="visually-hidden">
           Languanarium - useful platform for language learners
         </h1>
-        <p className={styles.lead}>
+        <p className={styles.hero}>
           Find friends that learn your language.
           <br />
           Use useful tools.
