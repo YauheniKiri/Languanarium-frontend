@@ -1,4 +1,5 @@
 import styles from "./page.module.scss";
+import Features from "./_ui/Features/Features";
 
 export default function Home() {
   return (
@@ -15,6 +16,7 @@ export default function Home() {
           Lets study together!
         </p>
       </header>
+      <Features />
     </main>
   );
 }

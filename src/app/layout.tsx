@@ -29,7 +29,7 @@ export default function RootLayout({
                   <Navigation></Navigation>
                 </Wrapper>
               </header>
-              {children}
+              <Wrapper>{children}</Wrapper>
               <footer className={styles.footer}></footer>
             </div>
           </body>

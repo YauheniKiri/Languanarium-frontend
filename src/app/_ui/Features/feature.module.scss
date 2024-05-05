@@ -1,0 +1,25 @@
+.title {
+  font-size: $font-medium;
+  text-align: center;
+
+  @media (min-width: $tablet-width) {
+    font-size: $font-upper-medium;
+  }
+}
+
+.list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 10px;
+  padding: 0;
+  list-style: none;
+
+  @media (min-width: $tablet-width) {
+    grid-template-columns: 1fr 1fr;
+  }
+
+  @media (min-width: $desktop-width) {
+    grid-template-columns: 1fr 1fr 1fr;
+    gap: 20px;
+  }
+}
